@@ -5,8 +5,103 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Train times</title>
+
+	<!-- link to bootstrap -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- link to stylesheet -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- link to jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- moment.js is used for time and date functions -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.0/moment.min.js"></script>
+
 </head>
+
 <body>
+
+<div class = "container">
+
+	<div class="jumbotron">
+		<h1>Super Mega Hyper Trains, Wow!</h1>
+	</div>
+
+	<!-- panel for train schedule -->
+	<div class = "panel panel-primary">
+		<div class = "panel-heading"><h3>Current Train Schedule</h3></div>
+
+		<div class="panel-body">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency (min)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+					</tr>
+				</thead>
+				<tbody id="tableBody">	
+					<!-- this is where trains are written to the schedule from firebase -->
+				</tbody>
+			</table>
+		</div>
+
+	</div> <!-- end panel for train schedule -->
+
+
+	<!-- panel for adding a new train -->
+	<div class = "panel panel-primary">
+		<div class = "panel-heading"><h3>Add Train</h3></div>
+
+		<div class="panel-body">
+			<form>
+				<div class="form-group">
+					<label for="inputName">Train Name</label>
+					<input type="text" class="form-control" id="inputName">
+				</div>
+				<div class="form-group">
+					<label for="inputDestination">Destination</label>
+					<input type="text" class="form-control" id="inputDestination">
+				</div>
+				<div class="form-group">
+					<label for="inputTime">First Train Time (HH:MM 24-hour time)</label>
+					<input type="text" class="form-control" id="inputTime">
+				</div>
+				<div class="form-group">
+					<label for="inputFrequency">Frequency (min)</label>
+					<input type="text" class="form-control" id="inputFrequency">
+				</div>
+
+				<!-- submit button for adding a new train -->
+				<input type="submit" value="Submit" class="btn btn-primary" id="submitButton">
+			</form>
+		</div>
+
+	</div> <!-- end panel for adding a new train -->
+
+</div> <!-- end container -->
+
+
+<!-- firebase config script -->
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+
+<script>
+  var config = {
+    apiKey: "AIzaSyAp9hvisyJ2pbdW84vZdG_YKUqVsHVhwmg",
+    authDomain: "traintimetable-b67c0.firebaseapp.com",
+    databaseURL: "https://traintimetable-b67c0.firebaseio.com",
+    projectId: "traintimetable-b67c0",
+    storageBucket: "traintimetable-b67c0.appspot.com",
+    messagingSenderId: "303018340361"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!-- link to javascript -->
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 	
 </body>
 </html>
