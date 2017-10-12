@@ -1,1 +1,53 @@
 /* Coding boot camp week 7 homework. Train timetable using Firebase. */
+
+body {
+	background-image: url("../images/space.jpg");
+	color: #ffffff;
+}
+
+h1 {
+	font-style: italic;
+}
+
+h4 {
+	color: #ffffff;
+}
+
+hr {
+	border-color: #ffffff;
+}
+
+td {
+	background-color: #000000;
+	border-color: #000000;
+}
+
+.panel, .panel-primary>.panel-heading, .jumbotron {
+	background-color: #000000;
+	border-color: #000000;
+	opacity: 0.8;
+}
+
+.form-control {
+	color: #000000;
+}
+
+.btn-primary {
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: #000000;
+
+}
+
+.btn-primary:hover {
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: #000000;
+}
+
+.button-primary:focus {
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: #000000;
+	outline: 0;
+}
