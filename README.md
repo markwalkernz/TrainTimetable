@@ -1,2 +1,5 @@
 # TrainTimetable
-Coding Boot Camp Week 7 homework. Firebase.
+
+Demonstrates basic posting and retrieval of data using Google Firebase.
+
+Uses moment.js for date and time formatting.

@@ -1,4 +1,4 @@
-// Coding boot camp week 7 homework. Train timetable using Firebase.
+// Train timetable using Firebase.
 
 // initialise database
 var database = firebase.database();
@@ -56,46 +56,3 @@ database.ref().on("value", function(snapshot) {
 });
 
 
-
-
-
-
-
-// $("#submitButton").on("click", function(event) {
-
-
-// 	event.preventDefault();
-
-// 	$('.employeeRecord').empty();
-
-
-//   employeeName = $("#employeeName").val().trim();
-//   role = $("#role").val().trim();
-//   startDate = $("#startDate").val();
-//   monthlyRate = $("#monthlyRate").val();
-
-
-//   // Figure out months worked
-
-//   // monthsWorked = now - startDate;
-//   // return month
-
-//   // Total Billed
-//   totalBilled = monthsWorked * monthlyRate;
-
-//   //console.log(employeeName, role, startDate, monthsWorked, monthlyRate, totalBilled);
-
-//   database.ref().push({
-//     employeeName: employeeName,
-//     role: role,
-//     startDate: startDate,
-//     monthsWorked: monthsWorked,
-//     monthlyRate: monthlyRate,
-//     totalBilled: totalBilled
-//    });
-
-
-
-
-
-// });
